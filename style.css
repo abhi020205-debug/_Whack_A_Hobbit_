@@ -1,0 +1,79 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: #121212;
+  color: white;
+}
+
+h1 {
+  margin: 10px;
+}
+
+.hud {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  max-width: 360px;
+  margin: auto;
+}
+
+.hole {
+  width: 110px;
+  height: 110px;
+  background: #333;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+}
+
+.mole {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translateY(100%);
+  transition: transform 0.25s ease;
+}
+
+.hole.active .mole {
+  transform: translateY(0);
+}
+
+.hole.hit {
+  animation: shake 0.2s;
+}
+
+@keyframes shake {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(2deg); }
+  50% { transform: rotate(-2deg); }
+  75% { transform: rotate(2deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.player-card {
+  margin-top: 15px;
+}
+
+.player-card img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid lime;
+  object-fit: cover;
+}
+
+.hidden {
+  display: none;
+}

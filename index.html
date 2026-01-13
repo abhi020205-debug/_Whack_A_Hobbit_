@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Whack A Hobbit</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Whack A Hobbit</h1>
+
+<div class="hud">
+  <span>Score: <span id="score">0</span></span>
+  <span>Lives: <span id="lives">3</span></span>
+  <span>Combo: <span id="combo">0</span></span>
+</div>
+
+<button id="startBtn">Start Game</button>
+
+<div class="grid" id="grid"></div>
+
+<!-- PLAYER CAMERA -->
+<video id="camera" autoplay playsinline hidden></video>
+<canvas id="snapshot" width="320" height="240" hidden></canvas>
+
+<div id="playerCard" class="player-card hidden">
+  <h3>Best Score</h3>
+  <img id="playerPhoto">
+  <p><span id="bestScore">0</span></p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
